@@ -1,0 +1,18 @@
+   4744| call 1458 (print: "You find yourself writing "")
+   4746| pop r2
+   4748| pop r1
+   4750| pop r0
+
+   4752| set r0 4242
+   4755| set r1 25866
+   4758| set r2 32767
+   4761| set r3 28397
+   4764| call 1841 # seems like deciphering codes here
+
+   4766| push r0
+   4768| push r1
+   4770| push r2
+   4772| set r0 28401
+   4775| set r1 1531
+   4778| add r2 11678 10052
+   4782| call 1458 (print: "" on the tablet.  Perhaps it's some kind of code?\n")

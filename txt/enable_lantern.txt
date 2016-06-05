@@ -1,0 +1,29 @@
+
+# seems like a function that outputs inv
+# r0 - code from object it was provided
+5893:
+   5893| push r3
+   5895| add r3 r0 2  # r0 = 2668 (lantern)
+   5899| rmem r3 r3
+   5902| eq r3 r2 r3
+   5906| jf r3 5918
+   5909| add r0 r0 0
+   5913| rmem r0 r0
+   5916| call 5814 # output "- {}\n", where r0 is text of item
+   5918| pop r3
+   5920| ret
+
+# light your lantern
+#call 4885:
+   4885| push r0
+   4887| add r0 2676 2
+   4891| wmem r0 32767
+   4894| add r0 2680 2
+   4898| wmem r0 0
+   4901| push r0
+   4903| push r1
+   4905| push r2
+   4907| set r0 28569
+   4910| set r1 1531
+   4913| add r2 3614 2520
+   4917| call 1458

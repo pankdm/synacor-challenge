@@ -1,0 +1,94 @@
+# starting from 27381: definitions of items
+
+# elements start from 2668
+# i + 2 == 0: will show it in inv
+# i + 2 == X: will show it in location X
+
+# before taking:
+# >  2668| unknown (18062)
+#    2669| unknown (18069)
+#    2670| unknown (2317)
+#    2671| unknown (4720)
+
+# after taking:
+# >  2668| unknown (18062) # pointer to string name (tablet)
+#    2669| unknown (18069)
+#    2670| halt
+#    2671| unknown (4720)
+
+
+   3382| call 1458 // print "Your inventory:\n"
+   3384| pop r2
+   3386| pop r1
+   3388| pop r0
+   3390| set r2 0
+   3393| call 5876
+   3395| pop r2
+   3397| pop r0
+   3399| ret
+
+>
+   5823| push r1
+   5825| push r2
+   5827| set r0 27381 // start of items
+   5830| set r1 5846 // func body
+   5833| set r2 0
+   5836| call 1458 // for loop
+   5838| set r0 r2
+   5841| pop r2
+   5843| pop r1
+   5845| ret
+>
+   5846| push r3
+   5848| push r4
+   5850| rmem r3 2732
+   5853| add r4 r0 2
+   5857| rmem r4 r4
+   5860| eq r3 r3 r4
+   5864| jf r3 5871
+   5867| add r2 r2 1
+   5871| pop r4
+   5873| pop r3
+   5875| ret
+
+> Loop over inventory
+   5876| push r0
+   5878| push r1
+   5880| set r0 27381 // start of items
+   5883| set r1 5893 // func body
+   5886| call 1458 // for loop
+   5888| pop r1
+   5890| pop r0
+   5892| ret
+
+> loop body(r0 = i, r2 = control variable)
+# 16 elems
+# 2668
+# 2672
+# etx
+
+   5893| push r3
+   5895| add r3 r0 2
+   5899| rmem r3 r3  # r3 = m[r0 + 2]
+   5902| eq r3 r2 r3 # if(r2 == r3)
+   5906| jf r3 5918
+   5909| add r0 r0 0
+   5913| rmem r0 r0 #  r0 = m[r0]
+   5916| call 5814 // print_stirng(- %s \n")
+   5918| pop r3
+   5920| ret
+
+>
+  27381| wmem 2668 2672
+  27384| unknown (2676)
+  27385| unknown (2680)
+  27386| unknown (2684)
+  27387| unknown (2688)
+  27388| unknown (2692)
+  27389| unknown (2696)
+  27390| unknown (2700)
+  27391| unknown (2704)
+  27392| unknown (2708)
+  27393| unknown (2712)
+  27394| unknown (2724)
+  27395| unknown (2728)

@@ -1,0 +1,38 @@
+can: 20
+
+12 [4] (start)
+  north: 13
+> west: 16
+
+13
+  north: 14
+  south: 12
+
+14
+  north: 12
+
+16 [3]
+  north: 16
+  east: 12
+> south: 17
+
+17 [4]
+> north: 20 (+ can)
+  south: 13
+  west: 14
+  east: darkness (66) --> 21
+
+20 [1]
+> west: 12
+
+21 [2]
+  north: 14
+  south: 13
+
+west
+south
+north
+take can
+west
+
+====

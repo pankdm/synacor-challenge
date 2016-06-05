@@ -1,0 +1,21 @@
+   3148| push r0
+   3150| add r0 r0 2
+   3154| rmem r0 r0
+   3157| rmem r0 r0 # read number
+   3160| eq r2 r0 1
+   3164| out "\nThere "
+   3178| jt r2 3189
+   3181| out "are"
+   3187| jmp 3193
+   3189| out "is "
+   3195| call 2001
+   3197| out " exit"
+   3207| eq r2 r0 1
+   3211| jt r2 3216
+   3214| out "s:\n"
+   3220| pop r0
+   3222| push r0
+   3224| add r0 r0 2
+   3228| rmem r0 r0
+   3231| set r1 5814
+   3234| call 1458  // for loop

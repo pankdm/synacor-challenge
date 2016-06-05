@@ -1,0 +1,6 @@
+# 0 - 2314: code part
+# 2315 - 2734: items part?
+# 2734 - 6067: code part
+
+2317 - locations
+2668 - items

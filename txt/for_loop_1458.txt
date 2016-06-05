@@ -1,0 +1,58 @@
+A)
+call 1458: function to print a string
+
+# before entering funtion:
+# r0 -- offset:
+#   first goes length
+#   then actual symbols
+# r1 -- output type:
+#   1528: usual output
+#   1531: hashed output
+#   1619: no output
+#   5341: no output (some writing of 95-s)
+#   5814: "- {}\n".format(r0) then 1528
+#   5846: some checks from 2732 address
+#   5893:
+# r2 -- hashing seed
+
+# inside loop
+# r3 -- current index
+# r4 -- length
+
+#  not_found = [1523, 1553, 1701, 3234, 5284, 5836, 5886]
+
+
+call_1458(r0, 1528)
+
+>  1458| push r0   # save  registers to use them as locals
+   1460| push r3
+   1462| push r4
+   1464| push r5
+   1466| push r6
+   1468| set r6 r0   # r6 = r0
+   1471| set r5 r1   # r5 = r1
+   1474| rmem r4 r0  # number of iterations is specified in first element of offset
+   1477| set r1 0    # r1 = 0 # start loop with 0
+   1480| add r3 1 r1  # start for loop
+   1484| gt r0 r3 r4  #  condition to ext (r3 > r4)
+   1488| jt r0 1507
+   1491| add r3 r3 r6  # r6 used as starting offset (r0)
+   1495| rmem r0 r3   # r3 used as i # r0 = r3[i]
+   1498| call r5      # 
+   1500| add r1 r1 1  # r1 - loop counter
+   1504| jt r1 1480   # end for loop
+   1507| pop r6       # restore registers
+   1509| pop r5
+   1511| pop r4
+   1513| pop r3
+   1515| pop r0
+   1517| ret
+
+======================
+
+ # call_1518 == call_1458(r0, 1528)
+   1518| push r1
+   1520| set r1 1528
+   1523| call 1458
+   1525| pop r1
+   1527| ret

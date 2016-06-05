@@ -1,0 +1,148 @@
+# good, bad = gdb.GDB(vm).filter_by_pattern_1458()
+# for g in good: print g.pos, g.context; c = g.context; print gdb.GDB(vm).read_string(c['r0'], c['r1'], c['r2'])
+
+1064 {'r0': 26851, 'r1': 1531, 'r2': 5742}
+The self-test completion code is: GNIbaFAvOpUX
+
+
+2810 {'r0': 27414, 'r1': 1531, 'r2': 4839}
+
+What do you do?
+
+3022 {'r0': 27432, 'r1': 1531, 'r2': 19177}
+You see no such item.
+
+3133 {'r0': 27455, 'r1': 1531, 'r2': 22251}
+
+Things of interest here:
+
+3318 {'r0': 27482, 'r1': 1531, 'r2': 9326}
+I don't understand; try 'help' for instructions.
+
+3351 {'r0': 27532, 'r1': 1531, 'r2': 4476}
+look
+  You may merely 'look' to examine the room, or you may 'look <subject>' (such as 'look chair') to examine something specific.
+go
+  You may 'go <exit>' to travel in that direction (such as 'go west'), or you may merely '<exit>' (such as 'west').
+inv
+  To see the contents of your inventory, merely 'inv'.
+take
+  You may 'take <item>' (such as 'take large rock').
+drop
+  To drop something in your inventory, you may 'drop <item>'.
+use
+  You may activate or otherwise apply an item with 'use <item>'.
+
+3382 {'r0': 28037, 'r1': 1531, 'r2': 20454}
+Your inventory:
+
+3447 {'r0': 28054, 'r1': 1531, 'r2': 27757}
+Taken.
+
+3473 {'r0': 28062, 'r1': 1531, 'r2': 28786}
+You see no such item here.
+
+3529 {'r0': 28090, 'r1': 1531, 'r2': 23405}
+Dropped.
+
+3555 {'r0': 28100, 'r1': 1531, 'r2': 5877}
+You can't find that in your pack.
+
+3617 {'r0': 28135, 'r1': 1531, 'r2': 1128}
+You can't find that in your pack.
+
+3643 {'r0': 28170, 'r1': 1531, 'r2': 27389}
+You aren't sure how to use that.
+
+3717 {'r0': 28204, 'r1': 1531, 'r2': 2027}
+You have been eaten by a grue.
+
+3835 {'r0': 28236, 'r1': 1531, 'r2': 7910}
+Chiseled on the wall of one of the passageways, you see:
+
+
+3873 {'r0': 28303, 'r1': 1531, 'r2': 115}
+
+
+You take note of this and keep walking.
+
+
+3926 {'r0': 28347, 'r1': 1531, 'r2': 17766}
+That door is locked.
+
+4744 {'r0': 28369, 'r1': 1531, 'r2': 18175}
+You find yourself writing "
+4782 {'r0': 28401, 'r1': 1531, 'r2': 21730}
+" on the tablet.  Perhaps it's some kind of code?
+
+
+4848 {'r0': 28453, 'r1': 1531, 'r2': 11133}
+You fill your lantern with oil.  It seems to cheer up!
+
+
+4874 {'r0': 28510, 'r1': 1531, 'r2': 5992}
+You'll have to find something to put the oil into first.
+
+
+4917 {'r0': 28569, 'r1': 1531, 'r2': 6134}
+You light your lantern.
+
+
+4963 {'r0': 28595, 'r1': 1531, 'r2': 8176}
+You douse your lantern.
+
+
+5007 {'r0': 28621, 'r1': 1531, 'r2': 26722}
+You're not sure what to do with the coin.
+
+5088 {'r0': 28664, 'r1': 1531, 'r2': 12655}
+You place the
+5129 {'r0': 28679, 'r1': 1531, 'r2': 28915}
+ into the leftmost open slot.
+
+5302 {'r0': 28710, 'r1': 1531, 'r2': 9591}
+As you place the last coin, they are all released onto the floor.
+
+5328 {'r0': 28777, 'r1': 1531, 'r2': 3059}
+As you place the last coin, you hear a click from the north door.
+
+5470 {'r0': 28844, 'r1': 1531, 'r2': 9853}
+A strange, electronic voice is projected into your mind:
+
+  "Unusual setting detected!  Starting confirmation process!  Estimated time to completion: 1 billion years."
+
+
+5514 {'r0': 29014, 'r1': 1531, 'r2': 20066}
+You wake up on a sandy beach with a slight headache.  The last thing you remember is activating that teleporter... but now you can't find it anywhere in your pack.  Someone seems to have drawn a message in the sand here:
+
+
+5556 {'r0': 29245, 'r1': 1531, 'r2': 24953}
+
+
+It begins to rain.  The message washes away.  You take a deep breath and feel firmly grounded in reality as the effects of the teleportation wear off.
+
+
+5595 {'r0': 29400, 'r1': 1531, 'r2': 8935}
+A strange, electronic voice is projected into your mind:
+
+  "Miscalibration detected!  Aborting teleportation!"
+
+Nothing else seems to happen.
+
+
+5621 {'r0': 29545, 'r1': 1531, 'r2': 7166}
+You activate the teleporter!  As you spiral through time and space, you think you see a pattern in the stars...
+
+
+5698 {'r0': 29667, 'r1': 1531, 'r2': 20478}
+
+
+After a few moments, you find yourself back on solid ground and a little disoriented.
+
+
+5745 {'r0': 29757, 'r1': 1531, 'r2': 13413}
+You gaze into the mirror, and you see yourself gazing back.  But wait!  It looks like someone wrote on your face while you were unconscious on the beach!  Through the mirror, you see "
+5797 {'r0': 29946, 'r1': 1531, 'r2': 18656}
+" scrawled in charcoal on your forehead.
+
+Congratulations; you have reached the end of the challenge!

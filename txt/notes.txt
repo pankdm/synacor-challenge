@@ -1,0 +1,179 @@
+
+# 9 + 2 * 5^2 + 7^3 - 3 = 399
+
+
+   5275| wmem 2462 0
+   5278| set r0 27095
+   5281| set r1 5341
+   5284| call 1458
+
+5341:
+>  5341| push r2
+   5343| add r2 2457 1  # r2 = 2457 + 1
+   5347| rmem r2 r2     # r2 = * r2  # r2 = 10109
+   5350| add r2 r2 r0   # r2 = r2 + r0 # r2 = 10109 + char
+   5354| wmem r2 95     # *r2 = 95
+   5357| pop r2
+   5359| ret
+
+5846:
+>  5846| push r3
+   5848| push r4
+   5850| rmem r3 2732
+   5853| add r4 r0 2
+   5857| rmem r4 r4
+   5860| eq r3 r3 r4
+   5864| jf r3 5871
+   5867| add r2 r2 1
+   5871| pop r4
+   5873| pop r3
+   5875| ret
+
+
+   1619| push r3
+   1621| add r3 r2 1
+   1625| add r3 r3 r1
+   1629| rmem r3 r3
+   1632| eq r3 r0 r3
+   1636| jt r3 1645
+   1639| set r2 r1
+   1642| set r1 32767
+   1645| pop r3
+   1647| ret
+
+
+
+=====================================
+ 25974| mod 117 115 101
+ was changed to
+ 25974| mult 117 115 101
+
+--
+ function calls:
+  2830| set r0 25974
+  2833| set r1 32
+  2836| call 1571
+
+r0: 25974
+r1: 32
+r2: 4
+r3: 6
+r4: 101
+r5: 0
+r6: 0
+r7: 0
+
+  1571| push r1
+  1573| push r2
+  1575| set r2 r1
+  1578| set r1 1605
+  1581| call 1543
+  1583| pop r2
+  1585| pop r1
+  1587| ret
+--
+
+=====================================
+
+>  1458| push r0
+   1460| push r3
+   1462| push r4
+   1464| push r5
+   1466| push r6
+   1468| set r6 r0
+   1471| set r5 r1
+
+   1474| rmem r4 r0
+   1477| set r1 0
+
+>  1480| add r3 1 r1
+
+r0: 72
+r1: 2
+r2: 32767
+r3: 6131
+r4: 12
+r5: 1528
+r6: 6129
+r7: 0
+
+
+// starting from 1480: loop to print string
+   1484| gt r0 r3 r4
+r1 - current index symbol to output
+r4 - number of symbols in string
+r0 - will be '0' if last symbol
+
+   1488| jt r0 1507
+   1491| add r3 r3 r6
+   1495| rmem r0 r3
+r0 <-- memory[ r6 + r1 + 1]
+
+>  1498| call r5
+   1500| add r1 r1 1
+r1 += 1
+
+>  1504| jt r1 1480
+
+r5: 1531 // encoded
+r5: 1528:// no encoding
+r6: offset from which to read in memory
+
+>  1528| out (r0)
+   1530| ret
+>  1531| push r1
+   1533| set r1 r2
+   1536| call 2125
+   1538| out (r0)
+   1540| pop r1
+   1542| ret
+
+r0: 18143
+r1: 18175
+r2: 18175
+
+
+>  2125| push r1
+   2127| push r2
+
+   2129| and r2 r0 r1
+   2133| not r2 r2
+   2136| or r0 r0 r1
+   2140| and r0 r0 r2
+
+   2144| pop r2
+   2146| pop r1
+   2148| ret
+
+
+
+r1: X
+r2: X
+
+
+stack = [r1, r2]
+r2 = r1 & r0
+r2 = ! r2
+r0 = r0 | r1
+r0 = r0 & r2
+
+
+After string was printed:
+>  1507| pop r6
+   1509| pop r5
+   1511| pop r4
+   1513| pop r3
+   1515| pop r0
+
+r0: 1
+r1: 12
+r2: 32767
+r3: 13
+r4: 12
+r5: 1528
+r6: 6129
+r7: 0
+stack: [6129, 1, 12, 1, 118]
+
+
+=================================
