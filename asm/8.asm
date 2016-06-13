@@ -2224,7 +2224,7 @@
    5906| jf r3 5918
    5909| add r0 r0 0
    5913| rmem r0 r0
-   5916| call 5814  // print_stirng(- m[r0] \n") 
+   5916| call 5814  // print_stirng("- m[r0] \n") 
    5918| pop r3
    5920| ret
    5921| push r1

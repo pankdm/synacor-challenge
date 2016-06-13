@@ -75,9 +75,9 @@ def current_solution():
 def on_start():
     vm.return_on_input = True
     vm.run()
-    x().mark_locations()
-    x().disasm_to_file('asm/start.asm')
-    i('look')
+    # x().mark_locations()
+    x().disasm_to_file('asm/start-2.asm')
+    # i('look')
 
 def go_to_maze():
     vm.return_on_input = True
@@ -89,8 +89,20 @@ def go_to_maze():
 
 
 # go_to_maze()
-on_start()
-# current_solution()
+
+
+# patch the memory to show all items
+# 5902| eq r3 r2 r3
+# 5906| jf r3 5918 --> noop noop noop
+# 5909| add r0 r0 0
+#
+# vm.memory[5906] = 21
+# vm.memory[5907] = 21
+# vm.memory[5908] = 21
+#
+
+# on_start()
+current_solution()
 
 # take teleport
 
@@ -103,14 +115,6 @@ on_start()
 # # vm.block_on_output = True
 # vm.buffer += "\n"
 
-# patch the memory to show all items
-# 5902| eq r3 r2 r3
-# 5906| jf r3 5918 --> noop noop noop
-# 5909| add r0 r0 0
-#
-# vm.memory[5906] = 21
-# vm.memory[5907] = 21
-# vm.memory[5908] = 21
 
 # vm.return_on_input = True
 # vm.run()

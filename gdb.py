@@ -537,7 +537,7 @@ class GDB:
                 else:
                     data += '  // print_string( m[r0] )'
             if addr == 5814:
-                data += '  // print_stirng(- m[r0] \\n") '
+                data += '  // print_stirng("- m[r0] \\n") '
 
             if addr == 1458:
                 find_result = self.try_match_1458_r1_1531(offset)
